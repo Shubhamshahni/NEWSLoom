@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsloom | Your Daily Interest Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <nav class="topbar">
+                <a class="brand" href="{{ url_for('home') }}">
+                    <span class="brand-mark"></span>
+                    <span>Newsloom</span>
+                </a>
+                <p class="topbar-copy">Stories tuned to your curiosity.</p>
+            </nav>
+
+            <div class="hero-grid">
+                <section class="hero-copy">
+                    <p class="eyebrow">Interest-driven reading</p>
+                    <h1>Find the news that actually feels made for you.</h1>
+                    <p class="hero-text">
+                        Search any topic, tap into quick interest filters, and read the freshest headlines in a clean,
+                        magazine-inspired space.
+                    </p>
+
+                    <form class="search-panel" method="get" action="{{ url_for('home') }}">
+                        <label class="search-label" for="query">What do you want to read today?</label>
+                        <div class="search-row">
+                            <input
+                                id="query"
+                                name="query"
+                                type="text"
+                                placeholder="Try AI, cricket, startups, cinema..."
+                                value="{{ selected_query }}"
+                                autocomplete="off"
+                            >
+                            <button type="submit">Explore News</button>
+                        </div>
+                    </form>
+
+                    <div class="interest-strip">
+                        {% for interest in interests %}
+                            <a
+                                class="interest-pill {% if selected_query|lower == interest.query|lower %}active{% endif %}"
+                                href="{{ url_for('home', query=interest.query) }}"
+                            >
+                                {{ interest.label }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <aside class="hero-card">
+                    <p class="card-kicker">Live discovery</p>
+                    <h2>{{ article_count if article_count else 0 }} curated stories</h2>
+                    <p>
+                        Results for <strong>{{ selected_query }}</strong> are fetched on the server, so your API key stays
+                        protected and visitors simply enjoy the feed.
+                    </p>
+                    <div class="hero-stats">
+                        <div>
+                            <span class="stat-number">18</span>
+                            <span class="stat-label">Max fresh articles</span>
+                        </div>
+                        <div>
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">One-tap interests</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </header>
+
+        <main class="content">
+            {% if error_message %}
+                <section class="notice">
+                    <p>{{ error_message }}</p>
+                </section>
+            {% endif %}
+
+            {% if featured_article %}
+                <section class="section-heading">
+                    <div>
+                        <p class="eyebrow">Featured story</p>
+                        <h2>Top pick for {{ selected_query }}</h2>
+                    </div>
+                    <p class="section-copy">A lead article up front, followed by a responsive grid of more stories.</p>
+                </section>
+
+                <article class="featured-story">
+                    <div class="featured-media {% if not featured_article.image_url %}placeholder{% endif %}">
+                        {% if featured_article.image_url %}
+                            <img src="{{ featured_article.image_url }}" alt="{{ featured_article.title }}">
+                        {% else %}
+                            <div class="placeholder-art"></div>
+                        {% endif %}
+                    </div>
+
+                    <div class="featured-copy">
+                        <div class="meta-row">
+                            <span>{{ featured_article.source }}</span>
+                            <span>{{ featured_article.published_at }}</span>
+                            <span>{{ featured_article.read_time }}</span>
+                        </div>
+                        <h3>{{ featured_article.title }}</h3>
+                        <p>{{ featured_article.description }}</p>
+                        <div class="story-footer">
+                            <span>{{ featured_article.domain }}</span>
+                            <a href="{{ featured_article.url }}" target="_blank" rel="noreferrer">Read full story</a>
+                        </div>
+                    </div>
+                </article>
+            {% endif %}
+
+            {% if articles %}
+                <section class="section-heading">
+                    <div>
+                        <p class="eyebrow">More stories</p>
+                        <h2>Keep exploring</h2>
+                    </div>
+                    <p class="section-copy">Clean cards, strong hierarchy, and quick scanning on desktop and mobile.</p>
+                </section>
+
+                <section class="news-grid">
+                    {% for article in articles %}
+                        <article class="news-card">
+                            <div class="news-media {% if not article.image_url %}placeholder{% endif %}">
+                                {% if article.image_url %}
+                                    <img src="{{ article.image_url }}" alt="{{ article.title }}">
+                                {% else %}
+                                    <div class="placeholder-art"></div>
+                                {% endif %}
+                            </div>
+
+                            <div class="news-copy">
+                                <div class="meta-row">
+                                    <span>{{ article.source }}</span>
+                                    <span>{{ article.published_at }}</span>
+                                </div>
+                                <h3>{{ article.title }}</h3>
+                                <p>{{ article.description }}</p>
+                                <div class="story-footer">
+                                    <span>{{ article.read_time }}</span>
+                                    <a href="{{ article.url }}" target="_blank" rel="noreferrer">Open article</a>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </section>
+            {% elif not error_message %}
+                <section class="empty-state">
+                    <p class="eyebrow">No matches yet</p>
+                    <h2>Try a broader interest.</h2>
+                    <p>Search for topics like technology, business, football, health, or films.</p>
+                </section>
+            {% endif %}
+        </main>
+    </div>
+</body>
+</html>

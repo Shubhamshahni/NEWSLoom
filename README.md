@@ -1,4 +1,4 @@
-<img width="963" height="861" alt="Screenshot 2026-08-06 005738" src="https://github.com/user-attachments/assets/ed923bfa-3d0e-43a2-8c98-236febd60fc4" />
+
 # NEWSLoom
 
 `A beautifully designed Flask news app that turns user interests into a live, personalized reading experience.`
@@ -23,19 +23,21 @@ NEWSLoom is a modern Flask-based news website that helps people discover real-ti
 
 ### Hero Section
 
-![NEWSLoom hero section](<img width="963" height="861" alt="image" src="https://github.com/user-attachments/assets/51563465-109a-4e91-a211-c99a847509a4" />)
+![NEWSLoom hero section](<img width="963" height="861" alt="Screenshot 2026-08-06 005738" src="https://github.com/user-attachments/assets/ed923bfa-3d0e-43a2-8c98-236febd60fc4" />)
 
 
 
 ### Featured Story Section
 
-![NEWSLoom featured story section](<img width="990" height="903" alt="image" src="https://github.com/user-attachments/assets/3415ede2-73f8-4397-96f1-a7e601e5dc59" />)
+![NEWSLoom featured story section](<img width="1349" height="843" alt="Screenshot 2026-08-06 005834" src="https://github.com/user-attachments/assets/9f13f7fe-ae48-435e-b4c9-5f832226380c" />)
+
+
 
 
 
 ### News Grid
 
-![NEWSLoom article grid](<img width="1349" height="843" alt="image" src="https://github.com/user-attachments/assets/bebc1da2-8139-47ae-b235-e99530b0a720" />)
+![NEWSLoom article grid](<img width="990" height="903" alt="Screenshot 2026-08-06 005756" src="https://github.com/user-attachments/assets/39845bef-2dd0-4888-8b33-6c073fd51ebb" />)
 
 
 

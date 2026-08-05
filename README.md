@@ -1,3 +1,4 @@
+<img width="963" height="861" alt="Screenshot 2026-08-06 005738" src="https://github.com/user-attachments/assets/ed923bfa-3d0e-43a2-8c98-236febd60fc4" />
 # NEWSLoom
 
 `A beautifully designed Flask news app that turns user interests into a live, personalized reading experience.`

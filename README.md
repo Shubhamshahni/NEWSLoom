@@ -22,22 +22,19 @@ NEWSLoom is a modern Flask-based news website that helps people discover real-ti
 > Add the screenshots you shared to `assets/screenshots/` with the filenames below so GitHub can display them in this README.
 
 ### Hero Section
-
-![NEWSLoom hero section](<img width="963" height="861" alt="Screenshot 2026-08-06 005738" src="https://github.com/user-attachments/assets/ed923bfa-3d0e-43a2-8c98-236febd60fc4" />)
+<img width="963" height="861" alt="Screenshot 2026-08-06 005738" src="https://github.com/user-attachments/assets/ed923bfa-3d0e-43a2-8c98-236febd60fc4" />
 
 
 
 ### Featured Story Section
-
-![NEWSLoom featured story section](<img width="1349" height="843" alt="Screenshot 2026-08-06 005834" src="https://github.com/user-attachments/assets/9f13f7fe-ae48-435e-b4c9-5f832226380c" />)
+<img width="1349" height="843" alt="Screenshot 2026-08-06 005834" src="https://github.com/user-attachments/assets/9f13f7fe-ae48-435e-b4c9-5f832226380c" />
 
 
 
 
 
 ### News Grid
-
-![NEWSLoom article grid](<img width="990" height="903" alt="Screenshot 2026-08-06 005756" src="https://github.com/user-attachments/assets/39845bef-2dd0-4888-8b33-6c073fd51ebb" />)
+<img width="990" height="903" alt="Screenshot 2026-08-06 005756" src="https://github.com/user-attachments/assets/39845bef-2dd0-4888-8b33-6c073fd51ebb" />
 
 
 

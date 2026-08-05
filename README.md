@@ -22,15 +22,21 @@ NEWSLoom is a modern Flask-based news website that helps people discover real-ti
 
 ### Hero Section
 
-![NEWSLoom hero section](assets/screenshots/newsloom-hero.png)
+![NEWSLoom hero section](<img width="963" height="861" alt="image" src="https://github.com/user-attachments/assets/51563465-109a-4e91-a211-c99a847509a4" />)
+
+
 
 ### Featured Story Section
 
-![NEWSLoom featured story section](assets/screenshots/newsloom-featured-story.png)
+![NEWSLoom featured story section](<img width="990" height="903" alt="image" src="https://github.com/user-attachments/assets/3415ede2-73f8-4397-96f1-a7e601e5dc59" />)
+
+
 
 ### News Grid
 
-![NEWSLoom article grid](assets/screenshots/newsloom-article-grid.png)
+![NEWSLoom article grid](<img width="1349" height="843" alt="image" src="https://github.com/user-attachments/assets/bebc1da2-8139-47ae-b235-e99530b0a720" />)
+
+
 
 ## Tech Stack
 
